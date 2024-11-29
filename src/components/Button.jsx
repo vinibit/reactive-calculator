@@ -1,9 +1,18 @@
+import { clear } from "@testing-library/user-event/dist/clear";
 import "./Button.css";
 import React from 'react';
 
-const Button = ({ onClick, label }) => {
+const Button = ({ click, label, operation, double, triple }) => {   
+
     return (
-        <button className="button" onClick={onClick}>
+        <button 
+            className={`
+                button
+                ${operation ? "operation" : ""}
+                ${double ? "double" : ""}
+                ${triple ? "triple" : ""}                
+            `} 
+        onClick={() => click && click(label)}>
             { label }
         </button>
     );

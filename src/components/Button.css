@@ -12,3 +12,24 @@
     outline: none;
     cursor: pointer;
 }
+
+.button:active {
+    background-color: #ccc;
+}
+
+.button.double {
+    grid-column: span 2;
+}
+
+.button.triple {
+    grid-column: span 3;
+}
+
+.button.operation {
+    background-color: #0f93ff;
+    color: #fff;
+}
+
+.button.operation:active {
+    background-color: #0f4594cc;
+}
